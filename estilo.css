@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -59,26 +58,11 @@ header nav ul {
   font-size: 2rem;
   background: none;
   border: none;
-  display: none;
-}
-
-.hamburger-close {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  display: none;
 }
 
 #nav-menu {
   background-color: #fff;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#nav-menu.open {
-  display: block;
 }
 
 #nav-menu ul li {
@@ -88,11 +72,7 @@ header nav ul {
 
 @media (min-width: 768px) {
   .hamburger {
-    display: none;
-  }
-
-  .hamburger-close {
-    display: none;
+    display: inline;
   }
 
   #nav-menu {
