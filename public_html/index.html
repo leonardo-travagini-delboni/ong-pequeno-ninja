@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Define o conjunto de caracteres do documento -->
+    <meta charset="UTF-8" />
+    <!-- Define a largura da viewport e a escala inicial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da página -->
+    <title>Pequeno Ninja</title>
+    <!-- Vincula o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="estilo.css" />
+    <!-- Vincula o arquivo de script JavaScript e adia sua execução até o conteúdo ser carregado -->
+    <script src="script.js" defer></script>
+    <!-- Bibliotecas externas para o carrossel de imagens -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  </head>
+  
+  
+  <body>
+    <!-- Adicione a classe 'container' -->
+    <div class="container">
+      <!-- Cabeçalho do site -->
+      <header>
+        <div class="navbar">
+          <!-- Logo -->
+          <a href="#inicio">
+            <img src="imagens/logo.jpeg" alt="Logo Pequeno Ninja" id="logo" />
+          </a>
+
+            <!-- Botão do menu hambúrguer -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <!-- Navegação -->
+            <nav id="nav-menu" style="display:none;">
+              <ul>
+                <!-- Item de navegação: Início -->
+                <li><a href="#inicio" onclick="toggleMenu()">Início</a></li>
+                <!-- Item de navegação: Sobre -->
+                <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+                <!-- Item de navegação: Programas -->
+                <li><a href="#programas" onclick="toggleMenu()">Programas</a></li>
+                <!-- Item de navegação: Contato -->
+                <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+              </ul>
+            </nav>
+        </div>
+      </header>
+
+      <!-- Seção Início -->
+      <section id="inicio">
+        <h1>Bem-vindo ao Pequeno Ninja</h1>
+        <p>Transformando vidas através das artes marciais.</p>
+      </section>
+
+      <!-- Seção Sobre -->
+      <section id="sobre">
+        <h2>Sobre nós</h2>
+        <p>
+          <br />A ONG Pequeno Ninja tem como objetivo tirar crianças carentes do mundo das drogas e do crime, através do
+          ensinamento de artes marciais, musicais e muito mais.<br />
+        </p>
+      </section>
+
+      <!-- Seção Programas -->
+      <section id="programas">
+        <h2>Nossos programas</h2>
+        <ul>
+          <!-- Item de programa: Jiu-Jitsu -->
+          <li>
+            <h3>Jiu-Jitsu</h3>
+            <p>Uma arte marcial que foca na técnica de grappling e controle de chão.</p>
+          </li>
+          <!-- Item de programa: Muay Thai -->
+          <li>
+            <h3>Muay Thai</h3>
+            <p>Uma arte marcial tailandesa que utiliza socos, chutes, cotoveladas e joelhadas.</p>
+          </li>
+          <!-- Item de programa: Krav Maga -->
+          <li>
+            <h3>Krav Maga</h3>
+            <p>Arte marcial israelense onde a intenção é neutralizar de uma vez qualquer tipo de ataque recebido.</p>
+          </li>
+          <!-- Item de programa: MMA -->
+          <li>
+            <h3>MMA</h3>
+            <p>Artes marciais mistas, combinando técnicas de várias disciplinas de luta.</p>
+          </li>
+          <!-- Item de programa: Violão -->
+          <li>
+            <h3>Violão</h3>
+            <p>Instrumento de cordas mais comum do Brasil. Presente em diversos estilos musicais.</p>
+          </li>
+          <!-- Item de programa: Teclado -->
+          <li>
+            <h3>Teclado</h3>
+            <p>Instrumento musical de teclas dispostas lateralmente. Presente em diversos estilos musicais.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Seção Carrossel de Imagens -->
+      <section id="carrossel">
+        <h2>Atividades em Ação</h2>
+        <div class="slick-slider">
+          <img src="imagens/imagem_1.jpg" alt="Imagem 1" />
+          <img src="imagens/imagem_2.jpg" alt="Imagem 2" />
+          <img src="imagens/imagem_3.jpg" alt="Imagem 3" />
+          <img src="imagens/imagem_4.jpg" alt="Imagem 4" />
+          <img src="imagens/imagem_5.jpg" alt="Imagem 5" />
+          <!-- Adicione mais imagens conforme necessário -->
+        </div>
+      </section>
+
+      <!-- Adicionar os scripts do carrossel e jQuery no final do body para melhorar o desempenho -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+      <!-- Seção Faça sua Doação -->
+      <section id="doacao">
+        <h2>Seja contribuidor:</h2>
+        <p>PIX: CNPJ 33.314.954-0001/28</p>
+        <p>Associação Esportiva e Cultural Pequeno Ninja</p>
+      </section>
+
+      <!-- Seção Contato -->
+      <section id="contato">
+        <h2>Entre em contato</h2>
+
+        <!-- Botão de Endereço -->
+        <p><br /></p>
+        <button id="endereco-btn">Ver Endereço no Google Maps</button>
+        <p id="endereco" style="display: none">
+          Associação Esportiva e Cultural Pequeno Ninja<br />
+          Rua Itajobi, 199<br />
+          Bairro Santa Clara, 14962-198<br />
+          Novo Horizonte - SP
+        </p>
+        <p><br /></p>
+        <p>
+          Associação Esportiva e Cultural Pequeno Ninja<br />
+          Rua Itajobi, 199<br />
+          Bairro Santa Clara, 14962-198<br />
+          Novo Horizonte - SP
+        </p>
+        <p><br /></p>
+
+        <script>
+          // Função para mostrar o endereço e abrir o Google Maps
+          document.getElementById("endereco-btn").addEventListener("click", function () {
+            document.getElementById("endereco").style.display = "block";
+            window.open("https://www.google.com/maps/search/?api=1&query=-21.478369,-49.223108");
+          });
+        </script>
+
+        <!-- Botões de Redes Sociais -->
+        <div class="social-buttons">
+          <!-- Botao de WhatsApp -->
+          <a style="background-color: #333" href="https://wa.me/5517991711547" target="_blank">
+            <img src="imagens/whatsapp_logo.png" alt="WhatsApp" />
+          </a>
+
+          <!-- Botao de Instagram -->
+          <a style="background-color: #333" href="https://www.instagram.com/ongpequenoninjaoficial/" target="_blank">
+            <img src="imagens/instagram_logo.png" alt="Instagram" />
+          </a>
+
+          <!-- Botao de Facebook -->
+          <a
+            style="background-color: #333"
+            href="https://www.facebook.com/ongpequenoninja/?locale=pt_BR"
+            target="_blank"
+          >
+            <img src="imagens/facebook_logo.png" alt="Facebook" />
+          </a>
+
+          <!-- Botao de Telegram -->
+          <a style="background-color: #333" href="https://t.me/leonardo_delboni_bot" target="_blank">
+            <img src="imagens/telegram_logo.png" alt="Telegram" />
+          </a>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <form method="post" action="enviar_email.php">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required />
+
+          <label for="whatsapp">WhatsApp:</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <button id="back-to-top" style="display: none">Voltar ao topo</button>
+
+      <!-- Rodapé do site -->
+      <footer>
+        <p>&copy; 2023 Pequeno Ninja. Todos os direitos reservados.</p>
+        <p> Desenvolvido por Leonardo Travagini Delboni</p>
+        <p> https://github.com/leonardo-travagini-delboni</p>
+      </footer>
+
+      <!-- Adicionar o script de inicialização do carrossel ao final do body para melhorar o desempenho -->
+      <script>
+        // Inicializa o carrossel de imagens com mudança a cada 5 segundos
+        $(".slick-slider").slick({
+          autoplay: true,
+          autoplaySpeed: 5000,
+        });
+      </script>
+
+      <!-- Função para mostrar o endereço e abrir o Google Maps -->
+      <script>
+        document.getElementById("endereco-btn").addEventListener("click", function () {
+          document.getElementById("map").style.display = "block";
+        });
+      </script>
+    </div>
+    
+    <!-- Função de botão de hamburguer para recursividade de menu -->
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("nav-menu");
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+      }
+    </script>
+
+  </body>
+</html>
