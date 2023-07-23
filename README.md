@@ -4,4 +4,4 @@ Website desenvolvido em HTML, CSS e JAVASCRIPT como doação para a ONG PEQUENO 
 
 É uma doação realizada à ONG para impulsionar seu trabalho e arrecadar fundos para que mais jovens escolham corretamente seu futuro.
 
-O website pode ser acessado através de https:\\www.pequenoninja.online
+O website pode ser acessado através de https://www.pequenoninja.online
